@@ -1,0 +1,10 @@
+[project]
+name = "ai-agent-study"
+version = "0.1.0"
+description = "按周和 Session 组织的 AI Agent 开发学习项目"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ollama>=0.6.2",
+]
+

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+
+# 测试、检查和 Notebook 缓存
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# 本地密钥与环境配置
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# 本地实验输出
+/week_01/session_01/results/
