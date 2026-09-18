@@ -79,6 +79,8 @@
 
 ## Session 2：单次调用、Workflow 与 Agent
 
+本节完整讲解和练习见 [Session 02](session_02/README.md)。
+
 ### 2.1 先辨认执行方式
 
 | 执行方式 | 谁决定下一步 | 客服场景例子 |
@@ -127,6 +129,8 @@
 ---
 
 ## Session 3：Prompt 工程与输出校验
+
+本节完整讲解、三版 Prompt 和校验代码见 [Session 03](session_03/README.md)。当前实验通过公共客户端发送单个 prompt 字符串；下面的角色、任务等分区是内容组织方式，API 消息角色将在第 2 周学习。
 
 ### 3.1 System Prompt 的结构化写法
 

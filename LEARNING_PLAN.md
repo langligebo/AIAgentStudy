@@ -63,7 +63,7 @@
 - [ ] 能解释简单意图分类为何不一定需要 Agent，工具能力、执行权限分别由谁提供。
 - [ ] 三版 Prompt 使用相同输入比较，保留错误样本和结果，而非只展示成功案例。
 
-已有入口：[第一周笔记](week_01/week1-llm-agent-basics.md)、[Session 01 运行说明](week_01/session_01/README.md)、[实验代码](week_01/session_01/main.py)。当前脚本测试 Temperature，Top-p 对比留作可选扩展。
+已有入口：[第一周笔记](week_01/week1-llm-agent-basics.md)、[Session 01 运行说明](week_01/session_01/README.md)、[温度实验代码](week_01/session_01/main.py)、[Session 02 讲解与练习](week_01/session_02/README.md)、[Session 03 讲解与实验](week_01/session_03/README.md)。Session 01 测试 Temperature，Top-p 对比留作可选扩展。
 
 <a id="week-02"></a>
 
