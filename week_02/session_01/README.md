@@ -191,4 +191,4 @@ uv run python -m unittest discover -s tests -p 'test_*.py' -v
 
 自测：模型刚收到过订单号，下一次调用却没带历史；它应该自动知道这个订单号吗？如果流已经输出合法 JSON，却没有收到结束事件，程序应该如何处理？
 
-下一节是 JSON Schema、Pydantic 与业务校验。本节的待验收项需要根据你的真实运行与理解情况确认。
+下一节是 [Session 02：JSON Schema、Pydantic 与业务校验](../session_02/README.md)。本节的待验收项需要根据你的真实运行与理解情况确认。

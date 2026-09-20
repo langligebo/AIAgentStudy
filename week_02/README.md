@@ -7,7 +7,7 @@
 | Session | 主题 | 当前入口 |
 | --- | --- | --- |
 | 01 | 消息角色、结构化输出、历史、流式响应、工具探针和输出限制 | [讲义与运行说明](session_01/README.md) |
-| 02 | JSON Schema、Pydantic 与业务校验 | 按进度创建 |
+| 02 | JSON Schema、Pydantic 与业务校验 | [教案、示例与练习](session_02/README.md) |
 | 03 | 调用失败处理、能力基线与测试样本划分 | 按进度创建 |
 
 模型调用继续使用根目录的 `common.llm` 和 `config.toml`。实验只打印控制台输出；通过当前样本不等于已经验证全部能力。

@@ -4,12 +4,16 @@
 
 ## 学习入口
 
+- [教学约定](AGENTS.md)：每节课先生成教案，再开始讲解。
+- [学习进度](LEARNING_PROGRESS.md)：当前节、已验证内容和下次起点。
+
 - [13 周学习计划](LEARNING_PLAN.md)：每周 3 个 Session，包含知识点、实践任务和验收标准。
 - [第一周学习笔记](week_01/week1-llm-agent-basics.md)：LLM 基础、Agent 与工作流、Prompt 实验。
 - [第一周 Session 01](week_01/session_01/README.md)：Ollama Temperature 对比实验。
 - [第一周 Session 02](week_01/session_02/README.md)：单次模型调用、Workflow 与 Agent 的区别及架构练习。
 - [第一周 Session 03](week_01/session_03/README.md)：Prompt 对比、Few-shot 与三层输出校验。
 - [第二周 Session 01](week_02/session_01/README.md)：消息角色、模型能力探针、多轮历史与流式响应。
+- [第二周 Session 02](week_02/session_02/README.md)：JSON Schema、Pydantic、字段契约与业务校验。
 
 主线使用“知识库客服助手”贯穿学习，从模型调用、工具和 Skill，逐步加入检索、记忆、状态恢复、评估、安全及服务化。后续周和 Session 随学习进度创建；课程验收以实际实验记录为准。
 
@@ -78,6 +82,8 @@ AIAgentStudy/
 │   ├── config.py
 │   └── llm.py
 ├── README.md
+├── AGENTS.md
+├── LEARNING_PROGRESS.md
 ├── LEARNING_PLAN.md
 ├── week_01/
 │   ├── week1-llm-agent-basics.md
@@ -86,10 +92,12 @@ AIAgentStudy/
 │   └── session_03/
 ├── week_02/
 │   ├── README.md
-│   └── session_01/
-│       ├── README.md
-│       ├── probes.py
-│       └── main.py
+│   ├── session_01/
+│   │   ├── README.md
+│   │   ├── probes.py
+│   │   └── main.py
+│   └── session_02/
+│       └── README.md
 └── tests/
     └── test_week02_protocol.py
 ```

@@ -6,6 +6,8 @@
 
 ## 学习方式与项目约定
 
+- 遵循 [AGENTS.md](AGENTS.md)：每节课先保存教案，再开始讲解；当前节和继续学习的起点记录在 [LEARNING_PROGRESS.md](LEARNING_PROGRESS.md)。
+
 - 按 `week_01/session_01/` 组织学习内容；后续周和 Session 随学习进度创建。
 - 各 Session 通过 `common.llm.create_llm_client()` 统一调用模型；公共模块从根目录 [config.toml](config.toml) 读取地址、模型和超时。采样等实验变量在各实验中单独设置和展示。
 - 每个 Session 按“理解机制 → 最小实现 → 对照或故障验证”推进，每周第 3 个 Session 同时复盘。
@@ -13,7 +15,7 @@
 - Python 基础、类型标注、HTTP、JSON、异常处理、Git 和 uv 为基础；异步、数据校验和测试工具在对应实验中补齐。
 - 前期直接调用模型并手写执行循环，第 8 周再引入 LangGraph，对照理解框架承担的职责。
 - 从第 2 周开始积累固定测试样本；权限检查从第 3 周工具调用开始落实。
-- 目前已有第一周笔记和温度实验代码；代码存在不代表实验已执行或课程已完成。下面的验收项由实际结果确认后勾选。
+- 已有材料入口见根 README，当前进度见 LEARNING_PROGRESS.md；教案或代码存在不代表实验已执行或课程已完成。下面的验收项由实际结果确认后勾选。
 
 ## 贯穿项目：知识库客服助手
 
@@ -71,7 +73,7 @@
 
 目标：明确当前模型和接口能做什么，得到可校验、可诊断的响应。
 
-已有入口：[第二周概览](week_02/README.md)、[Session 01 讲义与实验](week_02/session_01/README.md)。
+已有入口：[第二周概览](week_02/README.md)、[Session 01 讲义与实验](week_02/session_01/README.md)、[Session 02 教案与练习](week_02/session_02/README.md)。
 
 | Session | 学习内容 | 实践 |
 | --- | --- | --- |
