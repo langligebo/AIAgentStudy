@@ -137,4 +137,43 @@ uv run python -m week_01.session_03.main
 - [ ] 已在相同输入和参数下比较三版 Prompt，查看成功与失败样例。
 - [ ] 能解释为什么任务正确率必须包含解析和字段失败的样本。
 
-上述为待验收项。下一节进入 [第二周 Session 01：模型能力验证与请求协议](../../week_02/session_01/README.md)，继续学习消息角色、结构化输出、多轮历史与流式响应。
+上述为待验收项。扩课后先进入[本模块 Session 04：Python 工程基础](../session_04/README.md)，完成本模块补充内容后再进入第二模块的消息角色、结构化输出、多轮历史与流式响应。
+
+## 复习补充：最小离线校验与本周复盘
+
+前置：JSON、字典与类别规则。以下代码复用本节已经存在的校验器；从项目根目录运行，无需模型或新依赖。
+
+```python
+# course: offline
+from week_01.session_03.cases import Case
+from week_01.session_03.main import check_output
+
+case = Case("local", "帮我处理一下这个。", None)
+normal = check_output('{"category":null,"needs_clarification":true}', case)
+wrong_task = check_output('{"category":"咨询","needs_clarification":false}', case)
+wrong_type = check_output('{"category":"咨询","needs_clarification":"false"}', case)
+assert normal.task_ok
+assert wrong_task.json_ok and wrong_task.schema_ok and not wrong_task.task_ok
+assert wrong_type.json_ok and not wrong_type.schema_ok
+print(normal, wrong_task, wrong_type, sep="\n")
+print("PASS：正常、任务错误和类型错误")
+```
+
+预期依次是三层通过、仅任务失败、字段类型失败。常见错误是将标题分段当 API 消息角色、把 Few-shot 当训练，以及 6 条样本全对后宣称某版普遍更好。
+
+<details>
+<summary>原练习及“三版全对是否效果一样”的参考答案</summary>
+
+“帮我处理一下”应要求澄清，合法的咨询对象仅通过前两层，任务仍错。用户提供的真实记录表明 A/B/C 在当前 6 条样本中都三层通过，18 次调用正常完成；这只能说本组没有区分出任务正确率差异，不能推断其他输入、稳健性或速度普遍相同。可增加先标注的边界开发样本，再用未参与调参的样本验收。
+
+</details>
+
+第一周复盘：温度控制生成随机性，架构决定谁选择路径，Prompt 定义任务，校验器检查结果。实验文本一致与业务成功不是一回事，固定循环与 Agent 决策也不是一回事。上述运行证据已记入学习进度，理解题和整节验收仍待确认。
+
+## 课程导航
+
+[总目录](../../README.md#课程总目录) · [本模块概览](../README.md) · [学习进度](../../LEARNING_PROGRESS.md) · [上一节](../session_02/README.md) · [下一节](../session_04/README.md)
+
+## 扩课后的衔接
+
+前三节现在是阶段复盘，下一节为[本模块 Session 04](../session_04/README.md)，再按导航进入后续内容；不能因进入补充课自动通过前节。
